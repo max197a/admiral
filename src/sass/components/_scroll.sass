@@ -1,0 +1,71 @@
+.scroll-button
+  width: 100%
+  padding: 10px 0 8px
+  text-align: center
+  a
+    display: inline-block
+    position: relative
+    // margin-left: -10px
+    padding: 10px 10px 20px
+
+  .icon-scroll
+    width: 22px
+    height: 31px
+    border: 2px solid #dddddd
+    border-radius: 35px
+    position: relative
+    // margin-left: -3px
+    &:before
+      position: absolute
+      display: block
+      left: 50%
+      margin-left: -2px
+      content: ''
+      width: 4px
+      height: 7px
+      background: #dddddd
+      top: 5px
+      border-radius: 10px
+
+      animation-duration: 1.5s
+      animation-iteration-count: infinite
+      animation-name: scroll
+    &:after
+      position: absolute
+      display: block
+      content: ''
+      left: 50%
+      margin-left: -7px
+      top: 25px
+      width: 11px
+      height: 11px
+      border: 2px solid #dddddd
+      transform: rotate(-45deg)
+      border-right: 2px solid transparent
+      border-top: 2px solid transparent
+      border-bottom-left-radius: 3px
+
+      animation-duration: 1.5s
+      animation-iteration-count: infinite
+      animation-name: scrollarrow
+
+  @keyframes scroll
+    0%
+      opacity: 1
+    100%
+      opacity: 0
+      transform: translateY(12px)
+
+  @keyframes scrollarrow
+    0%
+      opacity: 1
+    100%
+      opacity: 0
+      transform: translateY(10px) rotate(-45deg)
+
++r($tablet)
+  .scroll-button
+    margin: 10px 0
+    padding: 5px
+    a
+      padding: 5px 5px 15px

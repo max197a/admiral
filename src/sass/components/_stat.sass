@@ -1,0 +1,237 @@
+.stat
+  padding-top: 16px
+  .container
+    text-align: center
+  &__grid
+    display: flex
+    align-items: flex-start
+    margin: 0 -14px
+    padding-top: 29px
+    flex-wrap: wrap
+  &__item
+    width: 50%
+    padding: 15px 14px 16px
+    min-width: 1px
+  &__item-container
+    overflow: hidden
+    border-radius: 5px
+    background: #fff
+    box-shadow: 0px 32px 73px 0px rgba(0, 0, 0, 0.2)
+  &__head
+    background: #2e7cff
+    min-height: 61px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 10px 20px
+    p
+      font-weight: 600
+      color: #fff
+      font-size: 16px
+      line-height: 1.2
+      padding-right: 15px
+      text-align: left
+  &__body
+    min-height: 389px
+    padding: 14px 0
+  &__bottom
+    background: #f2f2f2
+    min-height: 142px
+    padding: 10px 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    &--edit
+      min-height: 103px
+    p
+      width: 100%
+      color: rgba(#000000, 0.6)
+      text-transform: uppercase
+      text-align: center
+      font-size: 14px
+      font-weight: 600
+      margin-top: auto
+      // margin-bottom: 25px
+    .btn
+      display: inline-block
+      padding: 14px 20px
+      font-size: 14px
+      text-transform: uppercase
+      font-weight: 700
+      font-family: $regular
+      color: #fff
+      transition: all $transitionSpeed $ease
+      border-radius: 3px
+      line-height: normal
+      background: $colorBlue
+      margin-top: auto
+      margin-bottom: auto
+      min-width: 240px
+      position: relative
+      &:after
+        width: 26px
+        height: 12px
+        position: absolute
+        display: block
+        content: ''
+        background: url(../img/right-arrow.svg) center center no-repeat
+        background-size: contain
+        top: 50%
+        transform: translateY(-50%)
+        right: 15px
+      &:hover
+        background: #005af2
+  &__row
+    display: flex
+    align-items: center
+    padding: 10px 25px 10px 29px
+    transition: all $transitionSpeed $ease
+    cursor: pointer
+    &:hover
+      background: rgba(#2e7cff, 0.15)
+  &__image
+    max-width: 52px
+    max-height: 52px
+    flex: 1 0 52px
+    overflow: hidden
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: 19px
+    img
+      min-width: 100%
+      height: auto
+  &__row-title
+    color: #000000
+    font-weight: 600
+    line-height: 1.2
+    text-align: left
+  &__row-views
+    font-size: 13px
+    color: #a5a5a5
+    font-weight: 600
+    margin-top: 6px
+    text-align: left
+  &__row-head
+    padding-right: 15px
+  &__que
+    display: flex
+    margin-left: auto
+    align-items: center
+    img
+      width: 19px
+      height: auto
+      margin-right: 12px
+    p
+      font-size: 14px
+      color: #000
+      font-weight: 600
+  &__btn
+    width: 28px
+    min-width: 28px
+    height: 28px
+    min-height: 28px
+    border: 2px solid rgba(#2e7cff, 0.4)
+    border-radius: 3px
+    margin-left: 21px
+    position: relative
+    span
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      // bottom: 6px
+      width: 13px
+      height: 12px
+      background: url(../img/span-link.svg) center center no-repeat
+      // &:before
+      //   display: block
+      //   content: ''
+      //   position: absolute
+      //   left: -6px
+      //   bottom: 0px
+      //   width: 3px
+      //   height: 9px
+      //   background: #2e7cff
+      // &:after
+      //   display: block
+      //   content: ''
+      //   position: absolute
+      //   right: -6px
+      //   bottom: 0px
+      //   width: 3px
+      //   height: 13px
+      //   background: #2e7cff
+  &__buttons
+    margin-left: auto
+    display: flex
+    align-items: center
+  &__btn-head
+    text-transform: uppercase
+    color: #d8e6fe
+    font-size: 12px
+    padding: 7px 6px
+    border-radius: 3px
+    font-weight: 700
+    transition: all $transitionSpeed $ease
+    line-height: 1
+    &.is-active
+      color: #fff
+      background: rgba(255,255,255, 0.2)
+
++r($desktop)
+  .stat
+    &__grid
+      margin: 0 auto
+      padding-top: 0px
+    &__item
+      width: 100%
+      padding: 0
+      margin-top: 20px
+    &__head
+      p
+        font-size: 15px
+    &__row-title
+      font-size: 14px
+    &__body
+      min-height: 0
+      padding: 0
+    &__row-views
+      span
+        display: none
+    &__row
+      flex-wrap: wrap
+      padding: 10px
+    &__row-head
+      width: calc(100% - 45px)
+      margin-bottom: 10px
+    &__bottom
+      min-height: 0
+      padding: 20px 0
+      p
+        margin-bottom: 15px
+        padding: 0 10px
+      &--edit
+        min-height: 0
+        padding: 20px 0
+    &__image
+      width: 35px
+      height: 35px
+      min-width: 35px
+      min-height: 35px
+      max-width: 35px
+      max-height: 35px
+      flex: 1 0 35px
+      margin-right: 10px
+      img
+        width: 100%
+        height: auto
+    &__que
+      // margin-top: 10px
+    &__buttons
+      flex-direction: column
+    .scroll-button
+      margin-top: 25px
+      margin-bottom: 0

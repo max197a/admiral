@@ -1,0 +1,70 @@
+.footer
+  padding: 30px 0 30px
+  text-align: center
+  p
+    font-size: 12px
+    color: #abaeb3
+    text-transform: uppercase
+    text-align: center
+    margin-top: 28px
+    font-family: $regular
+    font-weight: 600
+  &__buttons
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 946px
+    margin: 34px auto 0
+  &__button
+    display: inline-block
+    padding: 17px 42px
+    width: 49%
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: 400
+    font-family: $regular
+    color: #000
+    transition: all $transitionSpeed $ease
+    border-radius: 8px
+    line-height: normal
+    border: 2px solid #f5ec52
+    letter-spacing: -0.6px
+    position: relative
+    span
+      font-weight: 700
+    .arrow
+      position: absolute
+      display: block
+      top: 50%
+      transform: translateY(-50%)
+      right: 14px
+      width: 
+    &--yellow
+      background: #fef445
+      box-shadow: 2px 10px 20px 0px rgba(245, 233, 25, 0.55)
+      &:hover
+        background: #fff987
+    &--green
+      background: #d9fe45
+      box-shadow: 0px 10px 20px 0px rgba(200, 250, 0, 0.55)
+      border-color: #ccf32e
+      &:hover
+        background: #e3ff75
+
++r($desktop)
+  .footer
+    &__button
+      padding: 17px 15px
+      font-size: 14px
+      padding: 17px 10px
+      .arrow
+        display: none
+
++r($tablet)
+  .footer
+    &__buttons
+      flex-wrap: wrap
+      margin-top: 0
+    &__button
+      width: 100%
+      margin-top: 25px

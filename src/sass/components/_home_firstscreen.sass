@@ -1,0 +1,73 @@
+.firstscreen
+  height: 100%
+  margin-top: 92px
+  .container
+    padding-top: 68px
+    background: #000
+    padding-bottom: 112px
+    background: url(../img/bg-main.svg) right 8px bottom no-repeat
+    background-size: contain
+  p
+    color: $colorBlue
+    font-size: 16px
+    line-height: 1
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: -0.5px
+  h2
+    color: #000
+    text-transform: uppercase
+    line-height: 1.2
+    font-size: 30px
+    font-family: $regular
+    margin: 16px 0 28px
+    font-weight: 600
+    text-align: left
+  &__button
+    max-width: 463px
+    width: 100%
+    padding-top: 6px
+    text-align: center
+    img
+      margin: 0 auto
+    .btn
+      display: inline-block
+      padding: 18px 15px 20px
+      width: 100%
+      font-size: 21px
+      text-transform: uppercase
+      font-weight: 400
+      font-family: $regular
+      color: #000
+      transition: all $transitionSpeed $ease
+      border-radius: 8px
+      line-height: normal
+      margin-top: 25px
+      background: #fef445
+      box-shadow: 2px 10px 20px 0px rgba(245, 233, 25, 0.55)
+      border: 2px solid #f5ec52
+      letter-spacing: -0.6px
+      span
+        font-weight: 700
+      &:hover
+        background: #fff987
+
++r($tablet)
+  .firstscreen
+    margin-top: 52px
+    .container
+      padding-top: 40px
+      background-size: 120%
+      background-position: left -40px bottom
+      padding-bottom: 40px
+    h2
+      font-size: 18px
+      margin: 15px 0 20px
+    &__button
+      img
+        margin-top: -5px
+      .btn
+        margin-top: 15px
+        padding: 13px 7px
+        font-size: 13px
+        letter-spacing: -0.2px

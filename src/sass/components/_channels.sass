@@ -1,0 +1,93 @@
+.channels
+  background: #f5f6f7
+  padding-top: 15px
+  position: relative
+  z-index: 2
+  padding-bottom: 31px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__item
+    width: 30%
+    margin: 0 auto
+    text-align: center
+    &:nth-of-type(2)
+      margin-top: 60px
+    &:nth-of-type(1)
+      img
+        max-width: 225px
+        height: auto
+    &:nth-of-type(2)
+      img
+        max-width: 281px
+        height: auto
+        &.shadow
+          margin-left: -15%
+    &:nth-of-type(3)
+      img
+        max-width: 303px
+        height: auto
+        &.shadow
+          margin-left: -15%
+          margin-top: 0
+          margin-bottom: 0
+      p
+        margin-left: -20px
+  &__image
+    width: 100%
+    text-align: center
+    img
+      width: 100%
+      height: auto
+      &.shadow
+        margin-top: 15px
+        margin-bottom: -10px
+  &__title
+    font-size: 36px
+    font-weight: 400
+    color: #000
+    margin-top: 30px
+  &__info
+    font-size: 21px
+    color: #000
+    margin-top: 8px
+  .scroll-button
+    margin-top: 30px
+
++r($desktop)
+  .channels
+    &__item
+      margin: 0
+      text-align: center
+      &:nth-of-type(3)
+        p
+          margin-left: 0
+    &__title
+      font-size: 32px
+    &__info
+      font-size: 18px
+    &__image
+      width: 90%
+      margin: 0 auto
+
++r($tablet)
+  .channels
+    padding-top: 0
+    padding-bottom: 20px
+    &__grid
+      flex-wrap: wrap
+    &__item
+      width: 100%
+      margin: 0 auto
+      margin-top: 25px
+      &:nth-of-type(2)
+        margin-top: 35px
+    &__image
+      max-width: 160px
+    &__title
+      font-size: 28px
+      margin-top: 10px
+    &__info
+      margin-top: 5px
+      font-size: 18px

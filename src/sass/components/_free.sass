@@ -1,0 +1,131 @@
+.free
+  background: #eff1f3
+  padding-bottom: 105px
+  .container
+    padding-top: 54px
+    text-align: center
+  &__grid
+    display: flex
+    align-items: flex-start
+    margin-top: -72px
+    justify-content: space-between
+  &__item
+    background: #eff1f3
+    border-radius: 5px
+    overflow: hidden
+  &__head
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 12px 14px 3px 18px
+    min-height: 72px
+    font-size: 0
+    background: rgb(62,160,254)
+    background: -moz-linear-gradient(left, rgba(62,160,254,1) 0%, rgba(46,127,255,1) 100%)
+    background: -webkit-linear-gradient(left, rgba(62,160,254,1) 0%,rgba(46,127,255,1) 100%)
+    background: linear-gradient(to right, rgba(62,160,254,1) 0%,rgba(46,127,255,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ea0fe', endColorstr='#2e7fff',GradientType=1 )
+    img
+      align-self: flex-end
+      margin-bottom: -9px
+    p
+      margin-left: 20px
+      color: #ffffff
+      font-size: 18px
+      font-weight: 600
+  &__item
+    width: 31.3%
+  &__title
+    margin-top: 49px
+    position: relative
+    font-weight: 600
+    color: $colorBlue
+    font-size: 18px
+    line-height: 1.2
+    &:before
+      position: absolute
+      display: block
+      content: '•'
+      font-weight: 600
+      font-size: 26px
+      color: $colorBlue
+      top: -24px
+      line-height: 9px
+      max-height: 9px
+      left: 50%
+      transform: translateX(-50%)
+  &__info
+    padding: 0 40px 40px
+  &__list
+    padding-top: 10px
+    padding-left: 9px
+    p
+      font-size: 14px
+      color: #000
+      font-weight: 400
+      line-height: 1.2
+      margin-top: 7px
+      padding-left: 9px
+      position: relative
+      span
+        color: $colorBlue
+        // position: absolute
+        margin-left: -10px
+        font-size: 16px
+        left: 0
+        top: 0px
+  &__bottom
+    .scroll-button
+      margin-top: -39px
+
++r($desktop)
+  .free
+    padding-bottom: 95px
+    .container
+      padding-top: 40px
+    &__head
+      p
+        font-size: 16px
+    &__info
+      padding: 0 20px 20px
+    &__title
+      margin-top: 35px
+      font-size: 16px
+      &:before
+        top: -19px
+
++r($tablet)
+  .free
+    padding-bottom: 80px
+    .container
+      padding-top: 30px
+    &__grid
+      flex-wrap: wrap
+      margin-top: -80px
+    &__item
+      width: 100%
+      margin-top: 25px
+    &__head
+      text-align: center
+      justify-content: center
+      min-height: 55px
+      img
+        height: 40px
+        width: auto
+      p
+        text-align: left
+    &__title
+      text-align: center
+    &__list
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding-top: 5px
+      padding-left: 0
+      p
+        display: inline-block
+        text-align: center
+    &__bottom
+      .scroll-button
+        margin-top: 15px

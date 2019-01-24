@@ -1,0 +1,81 @@
+.f-form
+  text-align: center
+  padding: 41px 0 43px
+  background: #f3f5f6
+  p
+    font-family: $opensans
+    font-weight: 700
+    color: $fontColor
+    font-size: 18px
+  &__grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 30px
+
+  .input-container
+    width: 23%
+    position: relative
+    label
+      position: absolute
+      font-size: 12px
+      font-family: $roboto
+      padding: 4px
+      border: 1px solid $redColor
+      left: 0
+      bottom: -17px
+      background: #fff
+    input[type=text]
+      background: transparent
+      border: none
+      font-family: $opensans
+      font-weight: 300
+      font-size: 18px
+      text-align: left
+      padding: 10px 5px 21px
+      border-bottom: 1px solid $fontColor
+      width: 100%
+    .btn
+      background: $redColor
+      border: none
+      font-family: $opensans
+      font-weight: 700
+      color: #fff
+      font-size: 18px
+      text-align: center
+      padding: 14px 5px 15px
+      border-radius: 5px
+      display: inline-block
+      width: 100%
+      cursor: pointer
+      &:hover
+        background: $redHover
+    &.has-error
+      input[type=text]
+        border-color: $redColor
+        
+
++r($desktop)
+  .f-form
+    &__grid
+      flex-wrap: wrap
+      padding-top: 15px
+      .input-container
+        width: 48%
+        margin-top: 15px
+
++r($tablet)
+  .f-form
+    &__grid
+      flex-wrap: wrap
+      padding-top: 15px
+      .input-container
+        width: 100%
+        margin-top: 10px
+        input[type=text]
+          font-size: 15px
+          padding: 15px 5px
+        .btn
+          margin-top: 15px
+          font-size: 15px
+          padding: 15px 5px

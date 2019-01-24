@@ -7,6 +7,8 @@
   background: transparent
   z-index: 100
   transform: translate3d(0,0,0)
+  .container
+    max-width: 1330px
   &.is-fixed-start
     position: fixed
     background: #fff
@@ -22,58 +24,59 @@
     margin-top: 3px
     margin-bottom: -3px
     img
-      height: 32px
+      height: 51px
       width: auto
   &__wrapper
-    padding: 29px 0
+    padding: 17px 0
     display: flex
     align-items: center
-  &__buttons
+    justify-content: space-between
+  &__links
+    display: flex
+    align-items: center
+    justify-content: space-between
     margin-left: auto
-    .btn
-      display: inline-block
-      padding: 9px 10px
-      font-size: 12px
-      text-transform: uppercase
+  &__item
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding-top: 7px
+    margin-left: 54px
+    p
+      font-size: 16px
+      font-family: $opensans
       font-weight: 700
-      font-family: $regular
-      color: #fff
-      transition: all $transitionSpeed $ease
-      border-radius: 3px
-      line-height: normal
-      margin-right: 10px
-      &--enter
-        background: #6a82ac
-        padding: 8px 26px 9px
-        &:hover
-          background: #586f97
-          // box-shadow: 0px 0px 15px #6a82ac
-      &--connect
-        background: #2a79ff
-        padding: 8px 17px 9px
-        &:hover
-          background: #005af2
-          // box-shadow: 0px 0px 15px #6a82ac
-  &__lang
-    margin-top: -2px
-    padding-left: 8px
-  &__lang-item
-    font-size: 12px
-    font-weight: 700
-    color: #bab9c8
-    font-family: $regular
-    transition: all $transitionSpeed $ease
-    border-bottom: 1px solid #bab9c8
-    display: inline-block
-    margin-left: 6px
-    &.is-active
-      color: #797898
-      border-color: transparent
-    &:hover
-      color: #797898
-      border-color: transparent
-  .hamburger
-    display: none
+      line-height: 1
+      color: $fontColor
+    a
+      display: inline-block
+      margin-top: 5px
+      font-size: 16px
+      color: $fontColor
+      font-family: $opensans
+      position: relative
+      &:hover
+        &:before
+          width: 100%
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 0
+        height: 1px
+        background: $fontColor
+        left: 0
+        bottom: -3px
+        transition: all $transitionSpeed $ease
+
+  &__mail-image
+    font-size: 0
+    margin-right: 13px
+    img
+      height: 24px
+      width: auto
+
+  
 
 +r($tablet)
   .header
@@ -102,57 +105,66 @@
       background: #fff
     &__logo
       margin-top: 0
-    &__lang
-      margin-top: 0
+      img
+        height: 37px
+    &__item
+      padding-top: 0
+      align-items: center
+      &:nth-child(1)
+        display: none
+      p
+        font-size: 14px
+        display: none
+      a
+        font-size: 18px
+        margin-top: 0
+        font-weight: 700
+    &__mail-image
+      img
+        height: 25px
+        animation-duration: 1.5s
+        animation-iteration-count: infinite
+        animation-name: tada
+    
+    
+@keyframes tada
+  from
+    transform: scale3d(1, 1, 1)
+
+  10%,
+  20%
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -6deg)
+
+  30%,
+  50%,
+  70%,
+  90%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 6deg)
+
+  40%,
+  60%,
+  80%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -6deg)
+
+  to
+    transform: scale3d(1, 1, 1)
+
+
+.swing
+  transform-origin: center center
 
 +r($mobile)
   .header
-    &__buttons
-      position: absolute
-      top: -100px
-      z-index: -1
-      width: 100%
-      display: flex
-      flex-direction: column
-      background: #fff
-      left: 0
-      padding: 0 20px
-      transition: all $transitionSpeed $ease
-      opacity: 0
-      padding-bottom: 20px
-      border-bottom: 1px solid #d1d1d1
-      .btn
-        width: 100%
-        margin-top: 20px
-        text-align: center
-      &.is-active
-        top: 56px
-        opacity: 1
-
-    &__lang
-      margin-left: auto
-      margin-top: 0
-      margin-right: 15px
-    .hamburger
-      display: block
-      padding: 0
-      margin: 0
-      opacity: 1
-    .hamburger-box
-      width: 30px
-      height: 20px
-    .hamburger-inner
-      width: 30px
-      border-radius: 0
-      margin-top: 0
-      background-color: #505660
-      &:before
-        border-radius: 0
-        width: 30px
-        top: -8px
-        background-color: #505660
-      &:after
-        border-radius: 0
-        width: 30px
-        bottom: -8px
-        background-color: #505660
+    &__logo
+      img
+        height: 30px
+    &__mail-image
+      margin-right: 8px
+      img
+        height: 20px
+    &__item
+      margin-left: 0
+      a
+        font-size: 14px
+        margin-top: 0
+        font-weight: 700

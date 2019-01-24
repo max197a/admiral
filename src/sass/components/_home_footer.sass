@@ -1,0 +1,32 @@
+.footer
+  padding: 25px 0
+  border-top: 1px solid #d1d1d1
+  background: #f3f5f6
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+  a
+    font-size: 16px
+    font-family: $opensans
+    color: #575757
+    position: relative
+    transition: all $transitionSpeed $ease
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: 0px
+      height: 1px
+      background: $redHover
+      bottom: -2px
+      transition: all $transitionSpeed $ease
+    &:hover
+      color: $redHover
+      &:before
+        width: 100%
+
+  p
+    font-size: 16px
+    font-family: $opensans
+    color: #575757

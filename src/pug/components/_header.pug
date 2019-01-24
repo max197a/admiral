@@ -5,13 +5,18 @@ header.header
     .header__wrapper
       a(href="#section-top").header__logo
         img(src="img/logotype.svg", alt="")
-      .header__buttons
-        a.btn.btn--enter(href="#enter-popup" js-popup) войти
-        a.btn.btn--connect(href="#connect-popup" js-popup) присоедениться
-      .header__lang
-        a.header__lang-item(href="#") RU
-        a.header__lang-item.is-active(href="#") EN
-      .hamburger.hamburger--spin(js-hamburger)
-        .hamburger-box
-          .hamburger-inner
+      .header__links
+        .header__item
+          .header__mail-image
+            img(src="img/mail.svg", alt="")
+          .header__mail-info
+            p Почта
+            a(href="mailto:admiral2325@gmail.com") admiral2325@gmail.com
+        .header__item
+          .header__mail-image
+            img.swing(src="img/phone.svg", alt="")
+          .header__mail-info
+            p Телефон
+            a(href="tel:+380671234567") 067 12 34 567
+          
 // HEADER :: END

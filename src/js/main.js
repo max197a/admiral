@@ -11,7 +11,7 @@ $(document).ready(function() {
   ////////////
 
   // single time initialization
-  legacySupport();
+  // legacySupport();
   initaos();
   var easingSwing = [0.02, 0.01, 0.47, 1];
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
 
   function pageReady() {
     initPopups();
-    initSliders();
+    // initSliders();
     initValidations();
     initScrollMonitor();
   }
@@ -39,18 +39,6 @@ $(document).ready(function() {
 
   function initaos() {
     AOS.init();
-  }
-
-  function legacySupport() {
-    // svg support for laggy browsers
-    svg4everybody();
-
-    // Viewport units buggyfill
-    window.viewportUnitsBuggyfill.init({
-      force: false,
-      refreshDebounceWait: 150,
-      appendToBody: true
-    });
   }
 
   // HAMBURGER TOGGLER
@@ -156,29 +144,29 @@ $(document).ready(function() {
   // SLIDERS
   //////////
 
-  function initSliders() {
-    var gallerySwiper = new Swiper("[js-slider-team-main]", {
-      wrapperClass: "swiper-wrapper",
-      loop: false,
-      watchOverflow: false,
-      setWrapperSize: true,
-      spaceBetween: 0,
-      slidesPerView: 1,
-      effect: "fade",
-      fadeEffect: {
-        crossFade: true
-      },
-      speed: 300,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      }
-    });
-  }
+  // function initSliders() {
+  //   var gallerySwiper = new Swiper("[js-slider-team-main]", {
+  //     wrapperClass: "swiper-wrapper",
+  //     loop: false,
+  //     watchOverflow: false,
+  //     setWrapperSize: true,
+  //     spaceBetween: 0,
+  //     slidesPerView: 1,
+  //     effect: "fade",
+  //     fadeEffect: {
+  //       crossFade: true
+  //     },
+  //     speed: 300,
+  //     pagination: {
+  //       el: ".swiper-pagination",
+  //       clickable: true
+  //     },
+  //     navigation: {
+  //       nextEl: ".swiper-button-next",
+  //       prevEl: ".swiper-button-prev"
+  //     }
+  //   });
+  // }
 
   ////////////////
   // FORM VALIDATIONS
@@ -246,33 +234,37 @@ $(document).ready(function() {
       return emailIsValid(value) || phoneIsValid(value);
     });
 
-    $(".js-form").validate({
+    $(".js-f-form").validate({
       errorPlacement: validateErrorPlacement,
       highlight: validateHighlight,
       unhighlight: validateUnhighlight,
       submitHandler: validateSubmitHandler,
       rules: {
         name: "required",
-        pass: "required"
+        phone: "required",
+        mail: "required"
       },
       messages: {
         name: "Необходимо заполнить",
-        pass: "Введите пароль"
+        phone: "Введите пароль",
+        mail: "Введите e-mail"
       }
     });
 
-    $(".js-form2").validate({
+    $(".js-f-form2").validate({
       errorPlacement: validateErrorPlacement,
       highlight: validateHighlight,
       unhighlight: validateUnhighlight,
       submitHandler: validateSubmitHandler,
       rules: {
         name: "required",
-        pass: "required"
+        phone: "required",
+        mail: "required"
       },
       messages: {
         name: "Необходимо заполнить",
-        pass: "Введите пароль"
+        phone: "Введите пароль",
+        mail: "Введите e-mail"
       }
     });
   }

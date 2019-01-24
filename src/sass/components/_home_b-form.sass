@@ -1,0 +1,88 @@
+.b-form
+  padding: 94px 0
+  h2
+    font-size: 48px
+    color: $fontColor
+    line-height: 1
+    font-weight: 700
+    font-family: $roboto
+    text-align: center
+  form
+    max-width: 370px
+    margin: 0 auto
+    text-align: center
+    p
+      font-size: 18px
+      font-family: $opensans
+      line-height: 1.75
+      margin-top: 32px
+  .input-container
+    width: 100%
+    position: relative
+    margin-top: 25px
+    padding-bottom: 2px
+    
+    label
+      position: absolute
+      font-size: 12px
+      font-family: $roboto
+      padding: 4px
+      border: 1px solid $redColor
+      left: 0
+      bottom: -17px
+      background: #fff
+    input[type=text]
+      background: transparent
+      border: none
+      font-family: $opensans
+      font-weight: 300
+      font-size: 18px
+      text-align: left
+      padding: 10px 11px 21px
+      border-bottom: 1px solid $fontColor
+      width: 100%
+    .btn
+      background: $redColor
+      border: none
+      font-family: $opensans
+      font-weight: 700
+      color: #fff
+      font-size: 18px
+      text-align: center
+      padding: 14px 5px 15px
+      border-radius: 5px
+      display: inline-block
+      width: 100%
+      cursor: pointer
+      margin-top: 25px
+      &:hover
+        background: $redHover
+    &.has-error
+      input[type=text]
+        border-color: $redColor
+
++r($desktop)
+  .b-form
+    padding: 60px 0
+    h2
+      font-size: 32px
+
++r($tablet)
+  .b-form
+    padding: 40px 0
+    h2
+      font-size: 24px
+    form
+      p
+        font-size: 14px
+        margin-top: 15px
+    .input-container
+      width: 100%
+      margin-top: 10px
+      input[type=text]
+        font-size: 15px
+        padding: 15px 5px
+      .btn
+        margin-top: 15px
+        font-size: 15px
+        padding: 15px 5px

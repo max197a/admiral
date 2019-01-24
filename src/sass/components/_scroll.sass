@@ -1,6 +1,6 @@
 .scroll-button
   width: 100%
-  padding: 10px 0 8px
+  padding: 20px 0 8px
   text-align: center
   a
     display: inline-block
@@ -9,9 +9,9 @@
     padding: 10px 10px 20px
 
   .icon-scroll
-    width: 22px
-    height: 31px
-    border: 2px solid #dddddd
+    width: 26px
+    height: 37px
+    border: 2px solid #babec1
     border-radius: 35px
     position: relative
     // margin-left: -3px
@@ -23,7 +23,7 @@
       content: ''
       width: 4px
       height: 7px
-      background: #dddddd
+      background: #babec1
       top: 5px
       border-radius: 10px
 
@@ -35,11 +35,11 @@
       display: block
       content: ''
       left: 50%
-      margin-left: -7px
-      top: 25px
-      width: 11px
-      height: 11px
-      border: 2px solid #dddddd
+      margin-left: -9px
+      top: 30px
+      width: 14px
+      height: 14px
+      border: 2px solid #babec1
       transform: rotate(-45deg)
       border-right: 2px solid transparent
       border-top: 2px solid transparent
@@ -65,7 +65,15 @@
 
 +r($tablet)
   .scroll-button
-    margin: 10px 0
+    margin: 10px 0 0
     padding: 5px
+    .icon-scroll
+      width: 20px
+      height: 32px
+      &:after
+        width: 10px
+        height: 10px
+        margin-left: -6px
+    
     a
       padding: 5px 5px 15px

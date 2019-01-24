@@ -1,5 +1,5 @@
 ---
-title: Telegraphist
+title: Admiral
 ---
 extends shared/_layout
 block content
@@ -7,576 +7,259 @@ block content
   // BEGIN SECTION :: firstscreen
   section
     .firstscreen
-      .container(data-aos='fade-up')
-        p(data-aos='fade-up') - как -
-        h2(data-aos='fade-up' data-aos-delay="50") получить полную статистику любого канала бесплатно
-        p(data-aos='fade-up' data-aos-delay="100") - или -
-        h2(data-aos='fade-up' data-aos-delay="150") сделать свой самым популярным?
-        .firstscreen__button(data-aos='fade-up' data-aos-delay="200")
-          img(src="img/down-arrow.svg", alt="")
-          a.btn(href="#") присоедениться к 
-            span  Телеграфисту
-      .scroll-button(data-aos='fade-up')
-        a(href="#section-base")
-          .icon-scroll
+      .container
+        h1(data-aos='fade-up') Откройте собственное
+          br
+          | «Бюро Переводов» 
+          span Admiral
+        .firstscreen__grid
+          .firstscreen__item(data-aos='fade-up')
+            p Инвестиции
+            p.price От 400 $ до 1 500 $
+          .firstscreen__item(data-aos='fade-up')
+            p Роялти
+            p.price Нет
+          .firstscreen__item(data-aos='fade-up')
+            p Площадь помещения
+            p.price от 10 м²
+          .firstscreen__item(data-aos='fade-up')
+            p Вступительный взнос 
+            p.price 600 $
+          .firstscreen__item(data-aos='fade-up')
+            p Рекламные отчисления
+            p.price Нет
+          .firstscreen__item(data-aos='fade-up')
+            p Срок окупаемости
+            p.price 3 месяца
+        .firstscreen__button(data-aos='fade-up')
+          a.firstscreen__btn(href="#") Получить подробную информацию
+        .scroll-button(data-aos='fade-up')
+          a(href="#section-about")
+            .icon-scroll
   
   // END SECTION :: firstscreen
 
-  // BEGIN SECTION :: base
-  section#section-base
-    .base
+  // BEGIN SECTION :: about
+  section#section-about
+    .about
       .container
-        h3(data-aos='fade-up') самая большая база каналов
-        h4(data-aos='fade-up') Возможность поиска по 58 000 русскоязычным и 28 000 зарубежным каналам. 
-          br
-          | По названию, описанию, ER, просмотрам на пост, количеству подписчиков. Сортировки по любым параметрам.
-        .base__grid
-          .base__item(data-aos='fade-up')
-            .base__image
-              img(src="img/base-1.svg", alt="")
-            p.base__title Вся аналитика в одном месте
-            p.base__info Подробная аналитика статистических характеристик канала — динамика изменения числа подписчиков, просмотров на пост, рекламные публикации и методы продвижения.
-          .base__item(data-aos='fade-up')
-            .base__image
-              img(src="img/base-2.svg", alt="")
-            p.base__title Огромная база публикаций
-            p.base__info Более 4 891 501 обновляемых и дополняемых в режиме реального времени рекламных публикаций. Репосты, упоминания, ссылки, кнопки. Полнотекстовый морфологический поиск по текстам для сортировки. Поиск упоминаний и записей.
-          .base__item(data-aos='fade-up')
-            .base__image
-              img(src="img/base-3.svg", alt="")
-            p.base__title Будьте в курсе трендов
-            p.base__info Сводная статистика позволяет быть в курсе трендов и видеть, какие каналы сейчас наиболее популярны и как они продвигаются.
-      .scroll-button(data-aos='fade-up')
-        a(href="#section-free")
-          .icon-scroll
-  // END SECTION :: base
-
-  // BEGIN SECTION :: free
-  section#section-free
-    .free(data-aos='fade-up')
-      .container
-        h3 все бесплатно
-        h4 Мы не берем оплату за предоставление вам аналитических данных о каналах
-    .free__bottom
-      .container
-        .free__grid
-          .free__item(data-aos='fade-up')
-            .free__head
-              .free__image
-                img(src="img/free-1.svg", alt="")
-              p Поиск по публикациям
-            .free__info
-              p.free__title Много фильтров
-              .free__list
-                p 
-                  span • 
-                  |  Поиск по названию канала
-                p 
-                  span • 
-                  |  Поиск по категории
-                p 
-                  span • 
-                  |  Поиск по языку
-              p.free__title Удобный сортинг
-              .free__list
-                p 
-                  span • 
-                  |  Поиск самых популярных и эффективных каналов
-              p.free__title Полная информация
-              .free__list
-                p 
-                  span • 
-                  |  Изменение числа подписчиков и просмотров у каждой публикации
-                p 
-                  span • 
-                  |  Вовлеченность
-                p 
-                  span • 
-                  |  Охват
-                p 
-                  span • 
-                  |  Количество новых публикаций в день
-          .free__item(data-aos='fade-up')
-            .free__head
-              .free__image
-                img(src="img/free-2.svg", alt="")
-              p Аналитика каналов
-            .free__info
-              p.free__title Динамика изменений числа подписчиков
-              p.free__title Динамика изменений просмотров
-              p.free__title Динамика количества публикаций в день
-          .free__item(data-aos='fade-up')
-            .free__head
-              .free__image
-                img(src="img/free-3.svg", alt="")
-              p Для рекламодателей
-            .free__info
-              p.free__title Отображение стоимости публикации для рекламодателей
-              p.free__title Аналитика рекламного поста каждый час
-              p.free__title Создание рекламного поста и предпросмот в личном кабинете
-              p.free__title Гарантия соблюдения времени и содержания каждого поста
-      .scroll-button(data-aos='fade-up')
-        a(href="#section-warranty")
-          .icon-scroll
-  // END SECTION :: free
-
-  // BEGIN SECTION :: warranty
-  section#section-warranty
-  .warranty(data-aos='fade-up')
-    .container
-      .warranty__container
-        h3(data-aos='fade-up') Телеграфист гарантирует, что каждый заказ будет размещен на оговоренных условиях
-        .warranty__grid
-          .warranty__left(data-aos='fade-up')
-            p Проверка наличия публикации на канале в течение всего срока
-            p Проверка содержания публикации в течение всего срока размещения
-          .warranty__right(data-aos='fade-up')
-            .warranty__right-container
-              .warranty__image
-                img(src="img/defend.svg", alt="")
-              p В противном случае возврат 100% потраченных средств
-    .scroll-button(data-aos='fade-up')
-      a(href="#section-channels")
-        .icon-scroll
-  // END SECTION :: warranty
-
-  // BEGIN SECTION :: channels
-  section#section-channels
-    .channels
-      .container
-        .channels__grid
-          .channels__item(data-aos='fade-up')
-            .channels__image
-              img(src="img/channel-1.svg", alt="")
-              img.shadow(src="img/shadow.png", alt="")
-            p.channels__title 58 000
-            p.channels__info Каналов
-          .channels__item(data-aos='fade-up')
-            .channels__image
-              img(src="img/channel-2.svg", alt="")
-              img.shadow(src="img/shadow.png", alt="")
-            p.channels__title Ежедневно
-            p.channels__info Обновляемая статистика
-          .channels__item(data-aos='fade-up')
-            .channels__image
-              img(src="img/channel-3.svg", alt="")
-              img.shadow(src="img/shadow.png", alt="")
-            p.channels__title 30 000 000
-            p.channels__info Публикаций
-      .scroll-button(data-aos='fade-up')
-        a(href="#section-carousel")
-          .icon-scroll
-  // END SECTION :: channels
-
-  // BEGIN SECTION :: team
-  section#section-carousel
-    .team
-      .container
-        .team__main-slider(data-aos="fade-up")
-          .swiper-container(js-slider-team-main)
-            .swiper-wrapper
-              .swiper-slide
-                .team__main-image.reveal(js-reveal data-anim="ltr")
-                  img(src="img/slide-1.png", alt="")
-                .team__main-about
-                  p.team__main-number 1
-                  p.team__main-title как это работает
-                  p.team__main-info Администратор канала добавляет телеграфист-бота с правами администратора — так у вас появляется возможность размещать рекламу на своем канале.
-              .swiper-slide
-                .team__main-image.reveal(js-reveal data-anim="ltr")
-                  img(src="img/slide-2.png", alt="")
-                .team__main-about
-                  p.team__main-number 2
-                  p.team__main-title тарифы и время публикации
-                  p.team__main-info Затем администраторы создают для канала тарифы с ценой и условиями публикации поста: через какое время пост будет удален и сколько времени он будет в топе на канале.
-              .swiper-slide
-                .team__main-image.reveal(js-reveal data-anim="ltr")
-                  img(src="img/slide-3.png", alt="")
-                .team__main-about
-                  p.team__main-number 3
-                  p.team__main-title выбор канала и покупка
-                  p.team__main-info Затем администраторы создают для канала тарифы с ценой и условиями публикации поста: через какое время пост будет удален и сколько времени он будет в топе на канале.
-              .swiper-slide
-                .team__main-image.reveal(js-reveal data-anim="ltr")
-                  img(src="img/slide-4.png", alt="")
-                .team__main-about
-                  p.team__main-number 4
-                  p.team__main-title публикация
-                  p.team__main-info Если администратор канал одобряет предложенную рекламу, то запись будет опубликована ботом по расписанию. Telehraphist проследит, чтобы пост находился в ленте указанное время.
-            .swiper-pagination
-            .swiper-button-next
-            .swiper-button-prev
-    .scroll-button.scroll-button--team(data-aos='fade-up')
-      a(href="#section-stat")
-        .icon-scroll
-
-  // END SECTION :: team
-
-  // BEGIN SECTION :: statistics
-  section#section-stat
-    .stat
-      .container
-        h3(data-aos='fade-up') статистика
-        .stat__grid
-          .stat__item(data-aos="fade-up")
-            .stat__item-container
-              .stat__head
-                p Каналы добавлены сегодня
-              .stat__body
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-1.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title LIFEHACK VIDEO
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-2.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Каналы Telegram - каталог
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-3.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Тайны Космоса
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-4.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Факт дня
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-5.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title App Box_Apple
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-              .stat__bottom
-                p За последний месяц добавлено: 10 500 каналов
-                a.btn(href="#") посмотреть все
-          .stat__item(data-aos="fade-up")
-            .stat__item-container
-              .stat__head
-                p Топ каналов
-              .stat__body
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-1.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title LIFEHACK VIDEO
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-2.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Каналы Telegram - каталог
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-3.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Тайны Космоса
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-4.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Факт дня
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-5.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title App Box_Apple
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-              .stat__bottom
-                a.btn(href="#") посмотреть все
-          .stat__item(data-aos="fade-up")
-            .stat__item-container
-              .stat__head
-                p Топ по приросту
-                .stat__buttons
-                  a.stat__btn-head.is-active(href="#") сегодня
-                  a.stat__btn-head(href="#") неделя
-                  a.stat__btn-head(href="#") месяц
-              .stat__body
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-1.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title LIFEHACK VIDEO
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people+.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-2.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Каналы Telegram - каталог
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people+.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-3.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Тайны Космоса
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people+.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-4.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Факт дня
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people+.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-5.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title App Box_Apple
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people+.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-              .stat__bottom.stat__bottom--edit
-                a.btn(href="#") посмотреть все
-          .stat__item(data-aos="fade-up")
-            .stat__item-container
-              .stat__head
-                p Топ по просмотрам на публикацию
-                .stat__buttons
-                  a.stat__btn-head.is-active(href="#") сегодня
-                  a.stat__btn-head(href="#") неделя
-                  a.stat__btn-head(href="#") месяц
-              .stat__body
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-1.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title LIFEHACK VIDEO
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people-eye.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-2.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Каналы Telegram - каталог
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people-eye.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-3.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Тайны Космоса
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people-eye.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-4.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title Факт дня
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people-eye.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-                a.stat__row(href="#")
-                  .stat__image
-                    img(src="img/stat-5.png", alt="")
-                  .stat__row-head
-                    p.stat__row-title App Box_Apple
-                    p.stat__row-views Просмотров
-                      span   на пост
-                      | : 10,648
-                  .stat__que
-                    img(src="img/people-eye.svg", alt="")
-                    p 382,949
-                  .stat__btn
-                    span
-              .stat__bottom.stat__bottom--edit
-                a.btn(href="#") посмотреть все
-      .scroll-button(data-aos='fade-up')
-        a(href="#section-try")
-          .icon-scroll
-  // END SECTION :: statistics
-
-  // BEGIN SECTION :: try
-  section#section-try
-    .try
-      .container
-        h3(data-aos='fade-up') давайте попробуем
-        .try__grid(data-aos='fade-up')
-          .try__item(data-aos='fade-up')
-            p Хочу сделать 
+        .about__grid
+          .about__left(data-aos='fade-up')
+            .about__left-image
+              img(src="img/map.svg", alt="")
+            .about__left-info
+              p.title Сеть
+              p Собственных - 1, Франчайзинговых - 6
+          .about__right
+            h2(data-aos='fade-up') О Компании
+            p(data-aos='fade-up') Официально Компания «АDMIRAL» была зарегистрирована в 2008г., сначала под брендом «Хмельницкое Бюро Переводов». Сегодня мы являемся лидером в своем регионе, зарегистрировали ТМ ADMIRAL, открыли франчайзинговые офисы в Киеве, Коростени, Измаиле, Ужгороде, Львове, Харькове.
               br
-              | свой канал популярнее:
-            a.try__button.try__button--yellow(href="#") создать 
-              span  рекламный аккаунт
-              img.arrow(src="img/black-arrow2.svg", alt="")
-          .try__item(data-aos='fade-up')
-            p Хочу продвинуть 
-              br
-              |  чей-нибудь канал:
-            a.try__button.try__button--green(href="#") 
-              span добавить телеграфиста  
-              | на свой канал
-              img.arrow(src="img/black-arrow2.svg", alt="")
+              | Наш сайт: 
+              a(href="#") admiralbureau.com
+            .about__right-grid(data-aos='fade-up')
+              .about__right-item
+                p.title Страна происхождения
+                p Украина
+              .about__right-item
+                p.title Год основания компании
+                p 2008
+              .about__right-item
+                p.title Регионы развития
+                p Вся Украина
+              .about__right-item
+                p.title Год запуска франчайзинга
+                p 2016
+        
+  // END SECTION :: about
 
-  // END SECTION :: try
-
-  // BEGIN SECTION :: bonus
-  section#section-bonus
-    .bonus
+  // BEGIN SECTION :: form
+  section
+    .f-form(data-aos='fade-up')
       .container
-        .bonus__head-image
-          img(src="img/bonus.svg", alt="" data-aos='fade-up')
-        h3(data-aos='fade-up') бонус
-        .bonus__container(data-aos='fade-up')
-          .bonus__grid
-            .bonus__left(data-aos='fade-up')
-              .bonus__image
-                img(src="img/convert.svg", alt="")
-            .bonus__right(data-aos='fade-up')
-              p Кейс
-                span «как заработать в телеграме»
-              a.bonus__button(href="#") Скачать 
-                span  pdf
-                img(src="img/icon-doc.svg", alt="")
-  // END SECTION :: bonus
+        p Введите ваши контакты и получите подробную информацию о франшизе
+        form.js-f-form(action="#" method="post")
+          .f-form__grid
+            .input-container
+              input(type="text" placeholder="Ваше имя" name="name")
+            .input-container
+              input(type="text" placeholder="Ваш Телефон" name="phone")
+            .input-container
+              input(type="text" placeholder="Электронная почта" name="mail")
+            .input-container
+              input.btn(type="submit", value="Отправить")
 
-  // BEGIN SECTION :: footer
-  section#section-stat
-    .footer
+  // END SECTION :: form
+
+  // BEGIN SECTION :: propose
+  section
+    .we-propose
       .container
-        a(href="#section-top")
-          img(src="img/logotype.svg", alt="")
-        .footer__buttons
-          a.footer__button.footer__button--yellow(href="#") создать 
-            span  рекламный аккаунт
-            img.arrow(src="img/black-arrow2.svg", alt="")
-          a.footer__button.footer__button--green(href="#") 
-            span добавить телеграфиста
-            |   на свой канал
-            img.arrow(src="img/black-arrow2.svg", alt="")
-        p.footer__copy © 2018 Telegaphist.ru «все права защищены»
-  // END SECTION :: footer
+        h2(data-aos='fade-up') Мы предлагаем
+        .we-propose__grid
+          .we-propose__item(data-aos='fade-up')
+            .we-propose__image
+              .we-propose__image-container
+                img(src="img/icon1.svg", alt="")
+            p Перевести документы с любого и на любой язык
+          .we-propose__item(data-aos='fade-up')
+            .we-propose__image
+              .we-propose__image-container
+                img(src="img/icon2.svg", alt="")
+            p Заверить переводы нотариально или печатью бюро переводов
+          .we-propose__item(data-aos='fade-up')
+            .we-propose__image
+              .we-propose__image-container
+                img(src="img/icon3.svg", alt="")
+            p Детально проконсультировать по вопросам апостилирования и легализации документов
+          .we-propose__item(data-aos='fade-up')
+            .we-propose__image
+              .we-propose__image-container
+                img(src="img/icon4.svg", alt="")
+            p Оформить документы для обучения, работы и воссоединения семьи за рубежом
+
+  // END SECTION :: propose
+
+  // BEGIN SECTION :: clients
+  section
+    .clients
+      .container
+        .clients__grid
+          .clients__left(data-aos='fade-up')
+            .clients__left-image
+              img(src="img/admiral.svg", alt="")
+            p Что Вы сможете предложить своим клиентам
+          .clients__right(data-aos='fade-up')
+            .clients__right-info(data-simplebar)              
+              p • Устные, письменные и он-лайн переводы;
+              p • Легализация и апостиль документов;
+              p • Нотариальное заверение;
+              p • Заверение печатью Бюро переводов;
+              p • Присяжный / аккредитованный перевод (Польша, Чехия, Франция, Италия и др.);
+              p • Подготовка документов для подачи за границей (на обучение за рубежом, на воссоединение семьи, постоянное место жительства и др.);
+              p • Помощь в получении справок о несудимости / регистрации места проживания и др.;
+              p • Истребование повторных документов ЗАГС;
+              p • Консультации и подготовка документов на получение гражданства;
+              p • Заполнение анкет на визу (США, Канада, Великобритания, Австралия и др.);
+              p • Подготовка документов для поступления в учебные заведения Польши, Германии, Франции и др.
+              p • Регистрация на подачу документов, Грин Карт США;
+              p • Услуги страхования;
+              p • Юридические услуги;
+              p • Подготовка к собеседованию, сдаче экзаменов в Гете-Институте, DELF / DALF (румынский, немецкий, французский и др.);
+              p • Нострификация дипломов;
+              p • Визовая поддержка, бронирование и продажа авиа, автобусных билетов за границу.
+
+  // END SECTION :: clients
+
+  // BEGIN SECTION :: interest
+  section
+    .interest
+      .container
+        .interest__grid
+          .interest__left(data-aos='fade-up')
+            .interest__left-image
+              img(src="img/admiral.svg", alt="")
+            p Кому это интересно
+          .interest__right(data-aos='fade-up')            
+            p Всем, кто хочет заниматься интеллектуальным бизнесом, из практики - это финансисты, экономисты, банкиры и т.д.
+            p Иногда, туристические агентства, языковые школы, юридические компании, агентства по трудоустройству и т.д., как  дополнительный неплохой заработок.
+            p Стартап для филологов иностранного языка, которые только начинают свою профессиональную деятельность.
+
+  // END SECTION :: interest
+
+  // BEGIN SECTION :: fran
+  section
+    .fran
+      .container
+        h2(data-aos='fade-up') Что получает франчайзи
+        .fran__list
+          .fran__item.fran__item--left(data-aos='fade-left')
+            .fran__overlay
+            p.info Секреты открытия нового офиса
+            .fran__number
+              p.number 1
+          .fran__line(data-aos='fade-up')
+          .fran__item.fran__item--right(data-aos='fade-left')
+            .fran__overlay
+            p.info Предоставление материалов  для фирменного оформления рекламной продукции, офиса
+            .fran__number
+              p.number 2
+          .fran__line(data-aos='fade-up')
+          .fran__item.fran__item--left(data-aos='fade-left')
+            .fran__overlay
+            p.info Размещение информации о предприятиях-франчайзи на официальном сайте Компаниии продвижения его услуг
+            .fran__number
+              p.number 3
+          .fran__line(data-aos='fade-up')
+          .fran__item.fran__item--right(data-aos='fade-left')
+            .fran__overlay
+            p.info Тактику проведения рекламной кампании
+            .fran__number
+              p.number 4
+          .fran__line(data-aos='fade-up')
+          .fran__item.fran__item--left(data-aos='fade-left')
+            .fran__overlay
+            p.info Теоретические основы и практические навыки правильного оформления переводов
+            .fran__number
+              p.number 5
+          .fran__line(data-aos='fade-up')
+          .fran__item.fran__item--right(data-aos='fade-left')
+            .fran__overlay
+            p.info Грамотное консультирование клиентов
+            .fran__number
+              p.number 6
+          .fran__line(data-aos='fade-up')
+          .fran__item.fran__item--left(data-aos='fade-left')
+            .fran__overlay
+            p.info Полное сопровождение заказов
+            .fran__number
+              p.number 7
+          .fran__line(data-aos='fade-up')
+          .fran__item.fran__item--right(data-aos='fade-left')
+            .fran__overlay
+            p.info Обучение персонала
+            .fran__number
+              p.number 8
+
+  // END SECTION :: fran
+
+  // BEGIN SECTION :: progress
+  section
+    .progress
+      .container
+        h2(data-aos='fade-up') Наши достижения
+        .progress__grid
+          .progress__item(data-aos='fade-up')
+            p.progress__date 2012-2015
+            .progress__point
+            p.progress__info Бюро переводов Admiral получило Золото по Хмельницкой области и бронзу среди предприятий Украины в номинации “Показатели масштабов производства и платежеспособности” Национального бизнес-рейтинга Украины.
+          .progress__item(data-aos='fade-up')
+            p.progress__date 2016
+            .progress__point
+            p.progress__info Предприятие стало обладателем звания «Лидер отрасли 2016», подтвержденного высокими позициями в Национальном бизнес-рейтинге;
+            p.progress__info Золото рейтинга по показателю «Рентабельность реализованной продукции (товаров, работ, услуг)»;
+            p.progress__info Золото рейтинга по показателю «Рентабельность доходов».
+          .progress__item(data-aos='fade-up')
+            p.progress__date 2018
+            .progress__point
+            p.progress__info.progress__info--bold Вошли в ТОП-25 Бюро переводов Украины.
+
+  // END SECTION :: progress
+
+  // BEGIN SECTION :: b-form
+  section
+    .b-form
+      .container
+        form.js-f-form2(action="#" method="post")
+          h2(data-aos='fade-up') Интересно?
+          p(data-aos='fade-up') Введите ваши контакты и получите подробную информацию о франшизе
+          .b-form__form(data-aos='fade-up')
+            .input-container
+              input(type="text" placeholder="Ваше имя" name="name")
+            .input-container
+              input(type="text" placeholder="Ваш Телефон" name="phone")
+            .input-container
+              input(type="text" placeholder="Электронная почта" name="mail")
+            .input-container
+              input.btn(type="submit", value="Отправить")
+
+  // END SECTION :: b-form

@@ -1,0 +1,121 @@
+.progress
+  padding: 58px 0 69px
+  background: #f3f5f6
+  h2
+    font-size: 48px
+    color: $fontColor
+    line-height: 1
+    font-weight: 700
+    font-family: $roboto
+    text-align: left
+    padding-left: 7px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding-top: 104px
+    position: relative
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: 104%
+      height: 2px
+      // border: 1px dashed $redColor
+      background: url(../img/line.png) center center no-repeat
+      background-size: cover
+      left: -2%
+      top: 162px
+  &__item
+    width: 32%
+    padding: 0 7px
+    &:last-child
+      width: 24.2%
+  &__date
+    font-size: 30px
+    font-family: $opensans
+    font-weight: 700
+    color: $fontColor
+    line-height: 1
+  &__point
+    margin: 17px 0 0px -1px
+    width: 24px
+    height: 24px
+    border-radius: 50%
+    border: 2px solid $redColor
+    position: relative
+    background: #f3f5f6
+    &:before
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      display: block
+      content: ''
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      background: $redColor
+  &__info
+    margin-top: 21px
+    padding-bottom: 13px
+    font-size: 18px
+    line-height: 1.7
+    font-family: $opensans
+    color: $fontColor
+    &--bold
+      font-weight: 700
+
++r($desktop)
+  .progress
+    padding: 60px 0
+    h2
+      font-size: 32px
+    &__grid
+      padding-top: 50px
+      &:before
+        top: 108px
+    &__info
+      font-size: 16px
+      margin-top: 17px
+      padding-bottom: 8px
+    &__item
+      width: 39%
+      &:last-child
+        width: 20%
+
++r($tablet)
+  .progress
+    padding: 40px 0
+    h2
+      font-size: 24px
+      padding-left: 0
+    &__grid
+      flex-wrap: wrap
+      padding-top: 0
+      &:before
+        left: 10px
+        top: 13px
+        width: 2px
+        height: 99%
+        background: url(../img/line-vert.png) center center no-repeat
+    &__item
+      width: 100%
+      padding-left: 35px
+      position: relative
+      margin-top: 30px
+      &:last-child
+        width: 100%
+    &__date
+      font-size: 24px
+    &__point
+      position: absolute
+      left: 0
+      top: 0
+      margin-top: 0
+    &__info
+      padding-bottom: 0
+      margin-top: 10px
+      font-size: 14px
+      &--bold
+        font-size: 16px

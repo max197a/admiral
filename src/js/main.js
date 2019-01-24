@@ -191,48 +191,53 @@ $(document).ready(function() {
         .removeClass("has-error");
     };
     var validateSubmitHandler = function(form) {
-      $("[js-trigger-thanks-popup]").click();
-      $(form)
-        .find("input")
-        .val("");
-      // initSubmit();
-      // $.ajax({
-      //   type: "POST",
-      //   url: $(form).attr("action"),
-      //   data: $(form).serialize(),
-      //   success: function(response) {
-      //     $(form).removeClass("loading");
-      //     var data = $.parseJSON(response);
-      //     if (data.status == "success") {
-      //       // do something I can't test
-      //     } else {
-      //       $(form)
-      //         .find("[data-error]")
-      //         .html(data.message)
-      //         .show();
-      //     }
-      //   }
-      // });
+      $(form).addClass("loading");
+
+      $.ajax({
+        type: "POST",
+        url: $(form).attr("action"),
+        data: $(form).serialize(),
+        success: function(data) {
+          $(form).removeClass("loading");
+          $.magnificPopup.open({
+            items: {
+              src: "#thankpopup",
+              type: "inline"
+            }
+          });
+        },
+        error: function(data) {
+          $.magnificPopup.open({
+            items: {
+              src: "#errorpopup",
+              type: "inline"
+            }
+          });
+        }
+      });
+      setTimeout(function() {
+        $.magnificPopup.close();
+      }, 50000);
     };
 
     /////////////////////
     // LEAD FORM
     ////////////////////
 
-    function emailIsValid(value) {
-      var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return emailRegex.test(value);
-    }
+    // function emailIsValid(value) {
+    //   var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //   return emailRegex.test(value);
+    // }
 
-    function phoneIsValid(value) {
-      // https://www.regextester.com/99415
-      var phoneRegex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-      return phoneRegex.test(value);
-    }
+    // function phoneIsValid(value) {
+    //   // https://www.regextester.com/99415
+    //   var phoneRegex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+    //   return phoneRegex.test(value);
+    // }
 
-    $.validator.addMethod("isPhoneMail", function(value, element) {
-      return emailIsValid(value) || phoneIsValid(value);
-    });
+    // $.validator.addMethod("isPhoneMail", function(value, element) {
+    //   return emailIsValid(value) || phoneIsValid(value);
+    // });
 
     $(".js-f-form").validate({
       errorPlacement: validateErrorPlacement,

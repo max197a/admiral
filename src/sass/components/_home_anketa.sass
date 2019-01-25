@@ -1,0 +1,81 @@
+.anketa
+  padding: 100px 0 100px
+  background: #f3f5f6
+  h2
+    font-size: 48px
+    color: $fontColor
+    line-height: 1
+    font-weight: 700
+    font-family: $roboto
+    margin-bottom: 20px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+  .input-container
+    width: 48%
+    position: relative
+    margin-top: 20px
+    &:last-child
+      width: 100%
+      padding-top: 20px
+    label
+      position: absolute
+      font-size: 12px
+      font-family: $roboto
+      padding: 4px
+      border: 1px solid $redColor
+      left: 0
+      bottom: -17px
+      background: #fff
+    input[type=text]
+      background: transparent
+      border: none
+      font-family: $opensans
+      font-weight: 300
+      font-size: 18px
+      text-align: left
+      padding: 10px 5px 21px
+      border-bottom: 1px solid $fontColor
+      width: 100%
+    .btn
+      background: $redColor
+      border: none
+      font-family: $opensans
+      font-weight: 700
+      color: #fff
+      font-size: 18px
+      text-align: center
+      padding: 20px
+      border-radius: 5px
+      display: inline-block
+      width: 100%
+      cursor: pointer
+      &:hover
+        background: $redHover
+    &.has-error
+      input[type=text]
+        border-color: $redColor
+
+
++r($desktop)
+  .anketa
+    padding: 70px 0
+    h2
+      font-size: 32px
+
+
+
++r($tablet)
+  .anketa
+    padding: 40px 0
+    h2
+      font-size: 24px
+      margin-bottom: 10px
+    .input-container
+      width: 100%
+      margin-top: 10px
+      input[type=text]
+        font-size: 14px
+        padding: 10px 10px 15px

@@ -296,6 +296,37 @@ $(document).ready(function() {
         mail: "Введите e-mail"
       }
     });
+
+    $(".form-anketa").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: validateSubmitHandler,
+      rules: {
+        name: "required",
+        surname: "required",
+        phone: "required",
+        mail: "required",
+        rodde: "required",
+        city: "required",
+        exp: "required",
+        profe: "required",
+        finance: "required",
+        wait: "required"
+      },
+      messages: {
+        name: "Необходимо заполнить",
+        surname: "Необходимо заполнить",
+        phone: "Необходимо заполнить",
+        mail: "Необходимо заполнить",
+        rodde: "Необходимо заполнить",
+        city: "Необходимо заполнить",
+        exp: "Необходимо заполнить",
+        profe: "Необходимо заполнить",
+        finance: "Необходимо заполнить",
+        wait: "Необходимо заполнить"
+      }
+    });
   }
 
   ////////////

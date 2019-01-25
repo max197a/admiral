@@ -1,0 +1,110 @@
+.faq
+  padding: 100px 0 100px
+  h2
+    font-size: 48px
+    color: $fontColor
+    line-height: 1
+    font-weight: 700
+    font-family: $roboto
+    margin-bottom: 40px
+  &__info
+    visibility: hidden
+    opacity: 0
+    display: none
+    width: 100%
+    transition: all $transitionSpeed $ease
+    animation: fade 1s
+    p
+      font-size: 16px
+      font-family: $opensans
+      line-height: 1.4
+      padding: 10px 50px 20px 25px
+      color: $fontColor
+
+  &__item
+    border-bottom: 1px solid #c3c3c3
+    a
+      font-size: 22px
+      font-family: $opensans
+      display: inline-block
+      width: 100%
+      position: relative
+      padding: 20px 50px 20px 25px
+      color: $fontColor
+      &:hover
+        background: rgba(0,0,0,0.05)
+      span
+        position: absolute
+        display: block
+        top: 26px
+        right: 20px
+        width: 14px
+        height: 14px
+        &:before
+          position: absolute
+          display: block
+          content: ''
+          width: 14px
+          height: 2px
+          top: 50%
+          transform: translateY(-50%)
+          background: $fontColor
+        &:after
+          position: absolute
+          display: block
+          content: ''
+          width: 14px
+          height: 2px
+          top: 50%
+          transform: translateY(-50%) rotate(90deg)
+          transform-origin: center center
+          background: $fontColor
+
+    &.is-open
+      .faq__info
+        display: block
+        visibility: visible
+        opacity: 1
+      a
+        span
+          &:after
+            display: none
+  
+@keyframes fade
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
++r($desktop)
+  .faq
+    padding: 70px 0
+    h2
+      font-size: 32px
+    &__item
+      a
+        font-size: 20px
+        padding: 20px 40px 20px 20px
+    &__info
+      p
+        padding: 10px 40px 20px 20px
+
+
+
++r($tablet)
+  .faq
+    padding: 40px 0
+    .container
+      padding: 0
+    h2
+      font-size: 24px
+      padding: 0 20px
+      margin-bottom: 20px
+    &__item
+      a
+        font-size: 18px
+        line-height: 1.5
+        span
+          position: absolute
+          right: 20px
+          top: 28px

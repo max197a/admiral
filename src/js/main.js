@@ -47,6 +47,14 @@ $(document).ready(function() {
     $(".header__buttons").toggleClass("is-active");
   });
 
+  _document.on("click", ".faq__button", function(e) {
+    e.preventDefault();
+    $(".faq__item").removeClass("is-open");
+    $(this)
+      .parent()
+      .toggleClass("is-open");
+  });
+
   // header scroll
   _window.on(
     "scroll",

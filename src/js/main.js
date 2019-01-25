@@ -23,7 +23,7 @@ $(document).ready(function() {
 
   function pageReady() {
     initPopups();
-    // initSliders();
+    initSliders();
     initValidations();
     initScrollMonitor();
   }
@@ -132,19 +132,23 @@ $(document).ready(function() {
       closeBtnInside: true,
       preloader: false,
       midClick: true
-      // removalDelay: 500,
-      // mainClass: "popup-buble",
-      // callbacks: {
-      //   beforeOpen: function() {
-      //     startWindowScroll = _window.scrollTop();
-      //     this.st.mainClass = this.st.el.attr("data-effect");
-      //     // $('html').addClass('mfp-helper');
-      //   },
-      //   close: function() {
-      //     // $('html').removeClass('mfp-helper');
-      //     _window.scrollTop(startWindowScroll);
-      //   }
-      // }
+    });
+
+    $("[js-open-photo]").magnificPopup({
+      type: "image",
+      removalDelay: 500, //delay removal by X to allow out-animation
+      callbacks: {
+        beforeOpen: function() {
+          // just a hack that adds mfp-anim class to markup
+          this.st.image.markup = this.st.image.markup.replace(
+            "mfp-figure",
+            "mfp-figure mfp-with-anim"
+          );
+          this.st.mainClass = this.st.el.attr("data-effect");
+        }
+      },
+      closeOnContentClick: true,
+      midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
     });
   }
 
@@ -152,29 +156,41 @@ $(document).ready(function() {
   // SLIDERS
   //////////
 
-  // function initSliders() {
-  //   var gallerySwiper = new Swiper("[js-slider-team-main]", {
-  //     wrapperClass: "swiper-wrapper",
-  //     loop: false,
-  //     watchOverflow: false,
-  //     setWrapperSize: true,
-  //     spaceBetween: 0,
-  //     slidesPerView: 1,
-  //     effect: "fade",
-  //     fadeEffect: {
-  //       crossFade: true
-  //     },
-  //     speed: 300,
-  //     pagination: {
-  //       el: ".swiper-pagination",
-  //       clickable: true
-  //     },
-  //     navigation: {
-  //       nextEl: ".swiper-button-next",
-  //       prevEl: ".swiper-button-prev"
-  //     }
-  //   });
-  // }
+  function initSliders() {
+    $("[js-review-slider]").slick({
+      dots: false,
+      arrows: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+  }
 
   ////////////////
   // FORM VALIDATIONS

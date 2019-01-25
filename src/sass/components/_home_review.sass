@@ -1,0 +1,43 @@
+.review
+  padding: 100px 0 100px
+  background: #f3f5f6
+  h2
+    font-size: 48px
+    color: $fontColor
+    line-height: 1
+    font-weight: 700
+    font-family: $roboto
+    margin-bottom: 40px
+  &__item
+    padding: 0 20px
+    p
+      font-size: 18px
+      font-family: $opensans
+      line-height: 1.2
+      margin-top: 15px
+      width: 100%
+      text-align: center
+  &__carousel
+    margin: 0 -20px
+    width: calc(100% + 40px)
+  &__item-image
+    width: 100%
+    font-size: 0
+    img
+      width: 100%
+      height: auto
+      box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75)
++r($desktop)
+  .review
+    padding: 70px 0
+    h2
+      font-size: 32px
+
+
+
++r($tablet)
+  .review
+    padding: 40px 0
+    h2
+      font-size: 24px
+      margin-bottom: 20px

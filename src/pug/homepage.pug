@@ -250,8 +250,8 @@ block content
   section
     .faq
       .container
-        h2 Часто задаемые вопросы
-        .faq__container
+        h2(data-aos='fade-up') Часто задаемые вопросы
+        .faq__container(data-aos='fade-up')
           .faq__item.is-open
             a.faq__button(href="#") Часто задаемый вопрос №1
               span
@@ -275,14 +275,47 @@ block content
 
   // END SECTION :: faq
 
+  // END SECTION :: review
+
+  section
+    .review
+      .container
+        h2(data-aos='fade-up') Отзывы франчайзи
+        .review__carousel(js-review-slider data-aos='fade-up')
+          .review__item
+            .review__item-image
+              a.no-barba(href="img/review.jpg" js-open-photo data-effect="mfp-zoom-in")
+                img(src="img/review.jpg", alt="")
+            p г.Львов
+          .review__item
+            .review__item-image
+              a.no-barba(href="img/review.jpg" js-open-photo data-effect="mfp-zoom-in")
+                img(src="img/review.jpg", alt="")
+            p г.Ужгород
+          .review__item
+            .review__item-image
+              a.no-barba(href="img/review.jpg" js-open-photo data-effect="mfp-zoom-in")
+                img(src="img/review.jpg", alt="")
+            p г.Коростень
+          .review__item
+            .review__item-image
+              a.no-barba(href="img/review.jpg" js-open-photo data-effect="mfp-zoom-in")
+                img(src="img/review.jpg", alt="")
+            p г.Измаил
+          .review__item
+            .review__item-image
+              a.no-barba(href="img/review.jpg" js-open-photo data-effect="mfp-zoom-in")
+                img(src="img/review.jpg", alt="")
+            p г.Киев
+
   // BEGIN SECTION :: b-form
   section
     .b-form
       .container
         form.js-f-form2(action="#" method="post")
-          h2(data-aos='fade-up') Интересно?
-          p(data-aos='fade-up') Введите ваши контакты и получите подробную информацию о франшизе
-          .b-form__form(data-aos='fade-up')
+          h2 Интересно?
+          p Введите ваши контакты и получите подробную информацию о франшизе
+          .b-form__form
             .input-container
               input(type="text" placeholder="Ваше имя" name="name")
             .input-container

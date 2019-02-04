@@ -304,27 +304,31 @@ $(document).ready(function() {
       submitHandler: validateSubmitHandler,
       rules: {
         name: "required",
-        surname: "required",
-        phone: "required",
-        mail: "required",
-        rodde: "required",
         city: "required",
-        exp: "required",
-        profe: "required",
-        finance: "required",
-        wait: "required"
+        phone: "required",
+        lastwork: "required",
+        study: "required",
+        family: "required",
+        forwhatbuy: "required",
+        wait: "required",
+        choose: "required",
+        haveb: "required",
+        howknow: "required",
+        mail: "required"
       },
       messages: {
         name: "Необходимо заполнить",
-        surname: "Необходимо заполнить",
-        phone: "Необходимо заполнить",
-        mail: "Необходимо заполнить",
-        rodde: "Необходимо заполнить",
         city: "Необходимо заполнить",
-        exp: "Необходимо заполнить",
-        profe: "Необходимо заполнить",
-        finance: "Необходимо заполнить",
-        wait: "Необходимо заполнить"
+        phone: "Необходимо заполнить",
+        lastwork: "Необходимо заполнить",
+        study: "Необходимо заполнить",
+        family: "Необходимо заполнить",
+        forwhatbuy: "Необходимо заполнить",
+        wait: "Необходимо заполнить",
+        choose: "Необходимо заполнить",
+        haveb: "Необходимо заполнить",
+        howknow: "Необходимо заполнить",
+        mail: "Необходимо заполнить"
       }
     });
   }

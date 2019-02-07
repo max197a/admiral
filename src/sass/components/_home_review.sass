@@ -1,5 +1,5 @@
 .review
-  padding: 100px 0 100px
+  padding: 100px 0 80px
   background: #f3f5f6
   h2
     font-size: 48px
@@ -8,8 +8,16 @@
     font-weight: 700
     font-family: $roboto
     margin-bottom: 40px
+  &__carousel
+    display: flex
+    align-items: flex-start
+    justify-content: space-around
+    flex-wrap: wrap
   &__item
     padding: 0 20px
+    max-width: 30%
+    margin: 25px auto
+    width: 100%
     p
       font-size: 18px
       font-family: $opensans
@@ -41,3 +49,8 @@
     h2
       font-size: 24px
       margin-bottom: 20px
+    &__item
+      max-width: 400px
+      margin: 15px auto
+      p
+        font-size: 14px
